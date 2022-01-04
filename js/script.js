@@ -54,12 +54,13 @@ window.onload = function() {
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap{ border-left: 0.08em solid #fff}";
   css.innerHTML = ".typewrite > .wrap{ color:#000}";
+  css.innerHTML = ".typewrite > .wrap{width:fixed}";
   des.innerHTML = ".des > .wrap{font-size:1rem}";
   document.body.appendChild(css);
 };
 // when click on nav tabs 
 const list = {
-  ABOUT:["OUR HISTORY","OUR CORE VALUES"," OUR LEADER SHIP"],
+  ABOUT:["OUR HISTORY","OUR CORE VALUES"," OUR LEADERSHIP"],
   BUSINESS: ["POWER",
              "CARBON BLACK",
              "IT-ENABLED SERVICES",
@@ -70,18 +71,20 @@ const list = {
 }
 $(document).ready(function(){
   $("#about_us").click(function(){
+    document.getElementById("panel").innerHTML = "";
+    $("#panel").append("<ul></ul>");
     $("#panel").slideToggle("slow");
-    for(var i = 0; i<list.ABOUT.length();i++){
-      var node = document.createElement("LI");
-      var textnode = document.createTextNode("Water");
-      node.appendChild(textnode);
-      document.getElementById("#panel").appendChild(node);
-    }
+    list["ABOUT"].forEach(function(item) {
+      $("#panel ul").append("<li>" + item + "</li>");
+    })
   });
   $("#business_").click(function(){
-    $("#panel").slideToggle("slow");
-    const extra = document.querySelector("#panel");
-    extra.innerHTML = "<ul><li>HISTORY</li><li>OUR CORE VALUES</li><li>OUR LEADER SHIP</li><ul/>";
+     document.getElementById("panel").innerHTML = "";
+     $("#panel").append("<ul></ul>");
+     $("#panel").slideToggle("slow");
+     list["BUSINESS"].forEach(function(item) {
+       $("#panel ul").append("<li>" + item + "</li>");
+     })
   });
 });
-// injecting some html elements:
+// carsoul of what is new :
