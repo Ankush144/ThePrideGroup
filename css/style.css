@@ -1,0 +1,48 @@
+#main_box_nav{
+    padding:0;
+}
+.navbar-brand{
+    font-weight: 900;
+    color:#fff;
+    text-decoration:underline;
+    font-family: 'Pushster', cursive;
+    font-size: xx-large;
+    margin-left:5rem;
+}
+.nav-ul{
+    margin-left:auto;
+    font-weight: bold;
+}
+.nav_li{
+    font-weight: bold;
+}
+.hero_section{
+    margin-top:10rem;
+}
+.define_category{
+    font-weight: bold;
+    font-size:3rem;
+}
+.des_category{
+    font-weight:300;
+    font-size:1.2rem;
+}
+.nav-a:hover{
+    color: #f5bb0c !important;
+    font-weight: bold;
+    text-decoration: underline;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+/* slider panel css */
+#panel, #flip {
+    text-align: center;
+  }
+  
+  #panel{
+    padding: 50px;
+    display: none;
+    background-color:#000;
+  }
+  /* slider panel css ends here */
